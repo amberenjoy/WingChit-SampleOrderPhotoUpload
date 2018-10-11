@@ -1,0 +1,40 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	
+	<ion-list no-line>
+    <ion-item>
+      <ion-input type="text" placeholder="用户名" name="fullname" #username></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="email" placeholder="邮箱" name="email" #email></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="number" placeholder="手机号码" name="mobile" #mobile></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="密码" name="password" #password></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+  	<button ion-button  round outline block (click)="Register()">注册</button>
+  </div>
+
+</ion-content>

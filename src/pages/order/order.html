@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{orderID}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item class="list-header">
+            <span>款号</span>
+            <!-- <span>客号</span> -->
+            <span>详细</span>
+        </ion-item>
+        <ion-item *ngFor="let collection of collections" (click)="presentModal(collection.type,orderID,clientName,colors)">
+            <span>{{ collection.type }} </span>
+            <!-- <span class="center-box">{{ collection.client }} </span> -->
+            <span><ion-icon name="add-circle"></ion-icon></span>
+        </ion-item>
+    </ion-list>
+</ion-content>
