@@ -1,0 +1,7 @@
+{
+  "name": "WingChitApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

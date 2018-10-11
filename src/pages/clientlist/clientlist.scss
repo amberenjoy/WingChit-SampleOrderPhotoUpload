@@ -1,0 +1,16 @@
+page-clientlist {
+    ion-header {
+        text-align: center;
+    }
+    ion-list {
+        ion-label {
+            cursor: pointer;
+            position: relative;
+        }
+        ion-label:after {
+            position: absolute;
+            content: ">";
+            right: 5px;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <p>款号 {{typeId}} </p>
+            <!-- <p> 客号 {{userID}}</p>  -->
+            <p>客人 {{clientName}}</p>
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">  <ion-icon name="close-circle"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 class="select-box">
+                <ion-item>
+                    <ion-label>颜色</ion-label>
+                    <ion-select [(ngModel)]="color.name" okText="确定" cancelText="取消">
+                        <ion-option *ngFor="let colorname of colors" [value]="colorname">{{colorname}}</ion-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+            <ion-col col-12 class="select-box">
+                <ion-item>
+                    <ion-label>备注</ion-label>
+                    <ion-input placeholder="请输入" [(ngModel)]="note"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[0] == '0'}">
+                    <img [src]="picToView[0]" alt="" (click)="viewGallery(0)">
+                    <div class="delete-icon" (click)="deletePhoto(0)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(0)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>前幅</p>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[1] == '1'}">
+                    <img [src]="picToView[1]" alt="" (click)="viewGallery(1)">
+                    <div class="delete-icon" (click)="deletePhoto(1)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(1)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>后幅</p>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[2] == '2'}">
+                    <img [src]="picToView[2]" alt="" (click)="viewGallery(2)">
+                    <div class="delete-icon" (click)="deletePhoto(2)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(2)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>侧围1</p>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[3] == '3'}">
+                    <img [src]="picToView[3]" alt="" (click)="viewGallery(3)">
+                    <div class="delete-icon" (click)="deletePhoto(3)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(3)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>侧围2</p>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[4] == '4'}">
+                    <img [src]="picToView[4]" alt="" (click)="viewGallery(4)">
+                    <div class="delete-icon" (click)="deletePhoto(4)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(4)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>内格</p>
+                </div>
+            </ion-col>
+            <ion-col col-6>
+                <div class="photo-box" [ngClass]="{'hasPhotoActive':hasPhoto[5] == '5'}">
+                    <img [src]="picToView[5]" alt="" (click)="viewGallery(5)">
+                    <div class="delete-icon" (click)="deletePhoto(5)">
+                        <ion-icon name="close"></ion-icon>
+                    </div>
+                    <div class="photo-add" (click)="openCamera(5)">
+                        <span>  <ion-icon name="add-circle"></ion-icon></span>
+                    </div>
+                    <p>其它</p>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <button ion-button full round (click)="uploadData(orderImages)">确认</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

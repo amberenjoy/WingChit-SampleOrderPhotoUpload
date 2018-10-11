@@ -1,0 +1,12 @@
+page-welcome {
+    #welcome {
+        ion-grid {
+            text-align: center;
+            padding-top: 20px;
+            img {
+                max-width: 160px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
