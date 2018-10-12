@@ -16,14 +16,14 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'welcome.html',
 })
 export class WelcomePage {
-  username:string; 
+  updateUser:string=""; 
   constructor(public navCtrl: NavController,public app: App, public navParams: NavParams,  private storage: Storage,public alertCtrl: AlertController,public platform: Platform) {
-
+      storage.get("updateUser").then((val) => {
+        this.updateUser=val;
+      });
       platform.registerBackButtonAction(() => {
         platform.exitApp();
       });
-  
-
   }
 
   ionViewDidLoad() {
