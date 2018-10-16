@@ -36,7 +36,11 @@ export class ModalPage {
     this.orderID=navParams.get('orderID');
     this.clientName=navParams.get('clientName');
     this.colors=navParams.get('colorsList');
-    this.color = { name: ' '};
+    this.color={name:''};
+    if(this.colors.length==1){
+      this.color = { name:  this.colors[0]};
+    }
+   
     this.createPhotos();
     platform.registerBackButtonAction(() => {
       this.viewCtrl.dismiss();
