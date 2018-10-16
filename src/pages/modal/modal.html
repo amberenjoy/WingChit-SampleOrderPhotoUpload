@@ -7,9 +7,9 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            <p>款号 {{typeId}} </p>
-            <!-- <p> 客号 {{userID}}</p>  -->
+            <!-- <p>款号 {{typeId}} </p> -->
             <p>客人 {{clientName}}</p>
+            <p>版单 {{orderID}}</p>
         </ion-title>
         <ion-buttons end>
             <button ion-button (click)="closeModal()">  <ion-icon name="close-circle"></ion-icon></button>
@@ -20,6 +20,12 @@
 <ion-content padding>
     <ion-grid>
         <ion-row>
+            <ion-col col-12 class="select-box">
+                <ion-item>
+                    <ion-label>款号</ion-label>
+                    <ion-input placeholder="请输入" [(ngModel)]="typeId"></ion-input>
+                </ion-item>
+            </ion-col>
             <ion-col col-12 class="select-box">
                 <ion-item>
                     <ion-label>颜色</ion-label>

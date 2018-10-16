@@ -34,8 +34,8 @@ export class WelcomePage {
   signIn(username: HTMLInputElement){
     // set a key/value
     if(username.value){
-      this.username=username.value;
-      this.storage.set('updateUser', this.username);
+      this.updateUser=username.value;
+      this.storage.set('updateUser', this.updateUser);
       this.navCtrl.push(TabsPage,{animate: false});
     }else{
       let alert = this.alertCtrl.create({title: "请输入用户名",buttons: ['确定']});

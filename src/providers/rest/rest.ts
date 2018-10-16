@@ -24,9 +24,13 @@ export class RestProvider {
     });
     loading.present();
     return new Promise(resolve => {
-      this.http.get(this.apiUrl).subscribe(data => {
+      this.http.get(this.apiUrl, {observe: 'response'} ).subscribe(resp  => { 
+        // Here, resp is of type HttpResponse<MyJsonData>.
+        // You can inspect its headers:
         loading.dismiss();
-        resolve(data);
+        console.log(resp.headers.get('Last-Modified'));
+        resolve(resp.body);
+        // And access the body directly, which is typed as MyJsonData as requested.
       }, err => {
         console.log(err);
       });
