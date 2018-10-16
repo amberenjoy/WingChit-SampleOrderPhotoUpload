@@ -16,7 +16,6 @@ export class RestProvider {
   } 
 
   getUsers() {
-<<<<<<< HEAD
     let loading = this.loadingCtrl.create({
       content: `
         <div class="custom-spinner-container">
@@ -27,10 +26,6 @@ export class RestProvider {
     return new Promise(resolve => {
       this.http.get(this.apiUrl).subscribe(data => {
         loading.dismiss();
-=======
-    return new Promise(resolve => {
-      this.http.get(this.apiUrl).subscribe(data => {
->>>>>>> 54872a2244d1077099c5f1482c4568f4856589f5
         resolve(data);
       }, err => {
         console.log(err);

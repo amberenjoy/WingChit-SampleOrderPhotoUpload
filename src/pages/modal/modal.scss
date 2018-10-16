@@ -5,12 +5,8 @@ page-modal {
             min-height: 90px;
             /* height: auto; */
             ion-title {
-<<<<<<< HEAD
                 padding-left: 15px;
                 padding-top: 8px;
-=======
-                padding-left: 10px;
->>>>>>> 54872a2244d1077099c5f1482c4568f4856589f5
             }
         }
         p {
@@ -92,7 +88,6 @@ page-modal {
         .delete-icon {
             display: none;
             position: absolute;
-<<<<<<< HEAD
             font-size: 22px;
             right: 8px;
             top: 8px;
@@ -115,23 +110,11 @@ page-modal {
                     z-index: -1;
                 }
             }
-=======
-            font-size: 20px;
-            right: 8px;
-            top: 8px;
-            background: rgba(255, 255, 255, .4);
-            padding: 2px 7px 0px;
-            border-radius: 50%;
->>>>>>> 54872a2244d1077099c5f1482c4568f4856589f5
         }
     }
     .hasPhotoActive {
         .photo-add {
-<<<<<<< HEAD
             opacity: 0.2;
-=======
-            opacity: 0.4;
->>>>>>> 54872a2244d1077099c5f1482c4568f4856589f5
         }
         img {
             opacity: 1;
