@@ -1,4 +1,4 @@
-# wingchit
+# wingchit - IOS version
 Upload photo app for wingchit company
 
 <h4>20181009</h4>
